@@ -1,9 +1,31 @@
 "use client";
-
 import { useState } from "react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { MoonIcon, Sun } from "lucide-react";
 
-export default function LightDarkToggle() {
-  const [darkMode, setDarkmode] = useState(true);
+type Props = {
+  className?: string;
+};
 
-  return <div></div>;
+export default function LightDarkToggle({ className }: Props) {
+  const [isDarkMode, setIsDarkmode] = useState(true);
+
+  return (
+    <Tooltip>
+      <TooltipTrigger
+        onClick={() => {
+          setIsDarkmode((prev) => !prev);
+          document.body.classList.toggle("dark");
+        }}
+        className={className}
+      >
+        {isDarkMode ? <MoonIcon /> : <Sun />}
+      </TooltipTrigger>
+      <TooltipContent>{isDarkMode ? "حالت روز" : "حالت شب"}</TooltipContent>
+    </Tooltip>
+  );
 }
