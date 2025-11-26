@@ -1,4 +1,6 @@
+import { Button } from "@/components/ui/button";
 import LightDarkToggle from "@/components/ui/light-dark-toggle";
+import Link from "next/link";
 
 type Props = {
   children?: React.ReactNode;
@@ -11,6 +13,9 @@ export default function LoggedOutLayout({ children }: Props) {
         {children}
       </div>
       <LightDarkToggle className="fixed top-[calc(50%-12px)] right-5" />
+      <Button asChild className="fixed top-2 right-2">
+        <Link href="/dashboard">حساب کاربری</Link>
+      </Button>
     </>
   );
 }
