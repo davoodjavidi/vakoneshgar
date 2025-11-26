@@ -13,8 +13,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-
-import { Activity } from "lucide-react";
 import Link from "next/link";
 
 export default function LoginPage() {
