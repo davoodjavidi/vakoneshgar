@@ -4,10 +4,10 @@ import Link from "next/link";
 export default function Logo() {
   return (
     <Link href="/">
-      <h2 className="flex gap-2 items-center">
+      <h3 className="flex gap-2 items-center">
         <Activity className="text-primary" size={30} />
         واکنشگر
-      </h2>
+      </h3>
     </Link>
   );
 }

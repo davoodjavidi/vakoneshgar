@@ -20,7 +20,7 @@ export default function MainMenu() {
 
       {/* start menu item */}
       <ul className="py-4 grow">
-        <MenuItem href="/dashboard">حساب کاربری من</MenuItem>
+        <MenuItem href="/dashboard">پیشخوان</MenuItem>
         <MenuItem href="/dashboard/users">کاربران</MenuItem>
         <MenuItem href="/dashboard/posts">مقاله</MenuItem>
         <MenuItem href="/dashboard/account">اکانت</MenuItem>

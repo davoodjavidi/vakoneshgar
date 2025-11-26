@@ -1,6 +1,7 @@
 "use client";
 
 import { validateLogin } from "@/app/_lib/actions";
+import Logo from "@/app/dashboard/_component/Logo";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -19,10 +20,7 @@ import Link from "next/link";
 export default function LoginPage() {
   return (
     <>
-      <div className="flex gap-2 items-center">
-        <Activity className="text-primary" size={30} />
-        <h3>واکنشگرا</h3>
-      </div>
+      <Logo />
 
       <Card className="w-full max-w-sm">
         <CardHeader>

@@ -1,7 +1,17 @@
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import SiteInfoTab from "./_component/SiteInfoTab";
+
 export default function Dashboard() {
   return (
-    <div>
-      <h3>حساب کاربری من</h3>
-    </div>
+    <Tabs defaultValue="siteInfo">
+      <TabsList className="mb-4">
+        <TabsTrigger value="siteInfo">اطلاعات کلی سایت</TabsTrigger>
+        <TabsTrigger value="teamsInfo">اطلاعات تیم</TabsTrigger>
+      </TabsList>
+      <TabsContent value="siteInfo">
+        <SiteInfoTab />
+      </TabsContent>
+      <TabsContent value="teamsInfo">اطلاعات تیم</TabsContent>
+    </Tabs>
   );
 }

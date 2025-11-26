@@ -6,10 +6,10 @@ type Props = {
 
 export default function DashboardLayout({ children }: Props) {
   return (
-    <div className="grid grid-cols-[250px_1fr] h-screen">
+    <div className="grid grid-cols-[240px_1fr] h-screen">
       <MainMenu />
       <div className="overflow-auto py-2 px-4">
-        <h3>خوش آمدی</h3>
+        <p className="mb-4">به وبسایت واکنشگر خوش آمدید</p>
 
         {children}
       </div>

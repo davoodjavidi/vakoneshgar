@@ -25,8 +25,10 @@ export default function LoginPage() {
 
       <Card className="w-full max-w-sm">
         <CardHeader>
-          <CardTitle>ورود</CardTitle>
-          <CardDescription>ورود به حساب کاربری</CardDescription>
+          <CardTitle>ثبت نام</CardTitle>
+          <CardDescription>
+            برای ثبت نام لطفا اطلاعات خود را وارد کنید
+          </CardDescription>
         </CardHeader>
         <CardContent className="">
           <form action={createUser} className="flex gap-2 flex-col">
