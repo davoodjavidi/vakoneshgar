@@ -1,6 +1,6 @@
 "use server";
 
-export async function validateLogin(formData: FormData) {
+export async function loginAction(formData: FormData) {
   const rawFormData = {
     email: formData.get("email"),
     password: formData.get("password"),

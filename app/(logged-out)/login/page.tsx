@@ -1,6 +1,6 @@
 "use client";
 
-import { validateLogin } from "@/app/_lib/actions";
+import { loginAction } from "@/app/_lib/actions";
 import Logo from "@/app/dashboard/_component/Logo";
 
 import { Button } from "@/components/ui/button";
@@ -26,7 +26,7 @@ export default function LoginPage() {
           <CardDescription>ورود به حساب کاربری</CardDescription>
         </CardHeader>
         <CardContent className="">
-          <form action={validateLogin} className="flex gap-2 flex-col">
+          <form action={loginAction} className="flex gap-2 flex-col">
             <Input type="email" placeholder="ایمیل" name="email" />
             <Input type="password" placeholder="پسورد" name="password" />
 
