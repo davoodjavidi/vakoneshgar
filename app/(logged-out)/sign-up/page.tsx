@@ -14,6 +14,7 @@ import { Input } from "@/components/ui/input";
 
 import { Activity } from "lucide-react";
 import Link from "next/link";
+import { useFormStatus } from "react-dom";
 
 export default function LoginPage() {
   return (
@@ -34,10 +35,10 @@ export default function LoginPage() {
           <form action={createUser} className="flex gap-2 flex-col">
             <Input type="text" placeholder="نام و نام خانوادگی" name="name" />
             <Input type="email" placeholder="ایمیل" name="email" />
+            <Input type="text" placeholder="کد ملی" name="nationalId" />
+            <Input type="text" placeholder="کشور" name="placeOfBirth" />
             <Input type="password" placeholder="پسورد" name="password" />
-            <Input type="password" placeholder="پسورد" name="confirmPassword" />
-
-            <Button>ورود</Button>
+            <SignUpButton />
           </form>
         </CardContent>
         <CardFooter className="justify-between">
@@ -49,4 +50,10 @@ export default function LoginPage() {
       </Card>
     </>
   );
+}
+
+function SignUpButton() {
+  const { pending } = useFormStatus();
+
+  return <Button>{pending ? "درحال ثبت نام" : "ثبت نام"}</Button>;
 }

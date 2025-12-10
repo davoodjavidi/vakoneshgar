@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Logo from "../dashboard/_component/Logo";
 import prisma from "@/lib/prisma";
@@ -16,17 +15,6 @@ export default async function PostsPage() {
           <Link href={`/posts/${post.id}`}>{post.title}</Link>
         </li>
       ))}
-
-      {/* <div className="flex gap-2 items-center">
-        <Button asChild>
-          <Link href="/login">ورود</Link>
-        </Button>
-        <small>|</small>
-
-        <Button asChild variant="outline">
-          <Link href="/sign-up">ثبت نام</Link>
-        </Button>
-      </div> */}
     </div>
   );
 }

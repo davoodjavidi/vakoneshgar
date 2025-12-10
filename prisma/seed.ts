@@ -12,8 +12,10 @@ const prisma = new PrismaClient({
 
 const userData: Prisma.UserCreateInput[] = [
   {
-    name: "Alice",
-    email: "alice@prisma.io",
+    name: "David",
+    email: "david@prisma.io",
+    nationalId: 285,
+    placeOfBirth: "IRAN",
     posts: {
       create: [
         {
@@ -31,10 +33,12 @@ const userData: Prisma.UserCreateInput[] = [
   {
     name: "Bob",
     email: "bob@prisma.io",
+    nationalId: 421,
+    placeOfBirth: "AUSTRALIA",
     posts: {
       create: [
         {
-          title: "Follow Prisma on Twitter",
+          title: "This is a post written by Bob about twitter",
           content: "https://www.twitter.com/prisma",
           published: true,
         },
